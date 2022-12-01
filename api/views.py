@@ -1,7 +1,6 @@
 from django.shortcuts import render
-from . import views
+from django.http import JsonResponse
 
-urlpatterns = [
-
-    path('', views.apiOverview, name="api-overview"),
-]
+def apiOverview(request):
+    return JsonResponse("API BASE POINT",safe=False)
+    
